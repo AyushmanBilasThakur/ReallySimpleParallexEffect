@@ -1,0 +1,127 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.plx{
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.plx1{
+    background-image: url("../images/img1.jpg");
+    min-height: 100vh;
+    color: white;
+}
+
+.plx2{
+    background-image: url("../images/img3.jpg");
+    min-height: 400px;
+    color: white;
+}
+
+.plx2::before, .plx3::before{
+    content: "";
+    background-color: rgba(0,0,0,0.6);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.plx3{
+    background-image: url("../images/img2.jpg");
+    min-height: 400px;
+    color: white;
+}
+
+.cnt-txt{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    vertical-align: middle;
+    
+    height: 100%; 
+    position: absolute;
+
+    /* top: 50%; */
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    
+}
+
+.cnt-txt h1{
+    margin-bottom: 40px;
+    font-size: 5rem;
+}
+
+.cnt-txt button{
+    position: relative;
+    width: fit-content;
+    font-weight: bold;
+    align-self: center;
+    padding: 20px 40px;
+    background: none;
+    border: none;
+    outline: none;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    font-size: 1rem;
+    border: 2px solid white;
+    transition: 0.4s all ease-in-out;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.cnt-txt button::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color: azure;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: 0.4s all ease-in-out;
+    z-index: -1;
+}
+
+.cnt-txt button:hover{
+    cursor: pointer;
+    color: black;
+}
+
+.cnt-txt button:hover::before{
+    transform: scaleX(1);
+}
+
+section{
+    padding: 80px 40px;
+    text-align: center;
+}
+
+section h1{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 540px){
+
+    .plx h1{
+        font-size: 2rem;
+    }
+
+    .plx button{
+        font-size: 0.7rem;
+        padding: 10px 20px;
+        letter-spacing: 5px;
+    }
+}
