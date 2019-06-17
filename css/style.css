@@ -3,6 +3,7 @@
     padding: 0px;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
 }
 
 .plx{
@@ -24,7 +25,7 @@
     color: white;
 }
 
-.plx2::before, .plx3::before{
+.plx1::before, .plx2::before, .plx3::before{
     content: "";
     background-color: rgba(0,0,0,0.6);
     position: absolute;
@@ -61,7 +62,7 @@
     font-size: 5rem;
 }
 
-.cnt-txt button{
+.cta{
     position: relative;
     width: fit-content;
     font-weight: bold;
@@ -80,7 +81,14 @@
     z-index: 0;
 }
 
-.cnt-txt button::before{
+.cta a{
+    text-decoration: none;
+    color: white;
+    z-index: 0;
+    transition: all 0.4s ease-in-out;
+}
+
+.cta::before{
     content: "";
     position: absolute;
     top: 0;
@@ -94,12 +102,17 @@
     z-index: -1;
 }
 
-.cnt-txt button:hover{
+.cta:hover{
     cursor: pointer;
     color: black;
 }
 
-.cnt-txt button:hover::before{
+.cta:hover a{
+    cursor: pointer;
+    color: black;
+}
+
+.cta:hover::before{
     transform: scaleX(1);
 }
 
@@ -114,15 +127,12 @@ section h1{
 }
 
 @media only screen and (max-width: 540px){
-    .plx{
-        background-attachment: scroll;
-    }
     .plx h1{
-        font-size: 2rem;
+        font-size: 3rem;
     }
 
     .plx button{
-        font-size: 0.7rem;
+        font-size: 0.9rem;
         padding: 10px 20px;
         letter-spacing: 5px;
     }
