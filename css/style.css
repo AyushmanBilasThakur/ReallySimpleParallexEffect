@@ -20,7 +20,7 @@
 
 .plx2{
     background-image: url("../images/img3.jpg");
-    min-height: 400px;
+    min-height: 800px;
     color: white;
 }
 
@@ -114,7 +114,9 @@ section h1{
 }
 
 @media only screen and (max-width: 540px){
-
+    .plx{
+        background-attachment: scroll;
+    }
     .plx h1{
         font-size: 2rem;
     }
