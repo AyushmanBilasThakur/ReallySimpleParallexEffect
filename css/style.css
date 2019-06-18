@@ -5,12 +5,52 @@
     font-family: Arial, Helvetica, sans-serif;
     scroll-behavior: smooth;
 }
+.nav{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 5;
+    padding: 10px 20px;
+    display: flex;
+    width: 100%;
+}
+
+.nav h1{
+    color: lightcoral;
+    font-size: 3rem;
+    width: fit-content;
+}
+
+.nav h1 span{
+    color: white;
+}
+.nav ul{
+    margin-left: auto;
+    
+}
+
+.nav ul li{
+    display: flex;
+    align-items: center;
+    margin: 20px;
+}
+
+.nav ul li a:hover{
+    color: lightcoral;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    
+}
 
 .plx{
     position: relative;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    
 }
 
 .plx1{
@@ -21,7 +61,7 @@
 
 .plx2{
     background-image: url("../images/img3.jpg");
-    min-height: 800px;
+    min-height: 500px;
     color: white;
 }
 
@@ -39,6 +79,7 @@
     background-image: url("../images/img2.jpg");
     min-height: 400px;
     color: white;
+    clip-path: none;
 }
 
 .cnt-txt{
@@ -58,8 +99,20 @@
 }
 
 .cnt-txt h1{
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     font-size: 5rem;
+}
+
+.cnt-txt h1 span{
+    color: lightcoral;
+}
+
+.cnt-txt p{
+    font-size: 1.3rem;
+    letter-spacing: 10px;
+    color: lightcoral;
+    font-weight: bold;
+    margin: 30px auto;
 }
 
 .cta{
@@ -81,11 +134,14 @@
     z-index: 0;
 }
 
-.cta a{
+a{
     text-decoration: none;
     color: white;
     z-index: 0;
     transition: all 0.4s ease-in-out;
+    width: fit-content;
+    margin: 0 auto;
+    
 }
 
 .cta::before{
@@ -118,22 +174,89 @@
 
 section{
     padding: 80px 40px;
-    text-align: center;
+    width: 100%;
+    overflow: hidden;
+    
 }
 
 section h1{
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: 20px;
+    color: lightcoral;
+}
+
+hr{
+    height: 5px;
+    position: absolute;
+    background: lightcoral;
+    border: none;
+    outline: none;
+    width: 98%;
+    left: 2%;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.grid ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    justify-content: center;
+    
+}
+
+.grid ul li::before{
+    content: "$    ";
+    color: lightcoral;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.grid ul li{
+    margin: 10px 0px;
+    font-size: 1.4rem;
+    transition: all 0.3s ease;
+}
+
+.grid ul li:hover{
+    cursor: context-menu;
+    color: lightcoral;
+}
+
+
+
+.pp img{
+    width: 100%;
+}
+
+.cta-black{
+    width: 100%;
+    margin: 10px 0;
+    color: lightcoral;
+    border: 2px solid lightcoral;
+}
+
+.cta-black::before{
+    background-color: lightcoral;
 }
 
 @media only screen and (max-width: 540px){
     .plx h1{
         font-size: 3rem;
     }
-
-    .plx button{
+    .plx p{
+        font-size: 1rem;
+        letter-spacing: 8px;
+    }
+    .cta{
+        width: auto;
         font-size: 0.9rem;
         padding: 10px 20px;
         letter-spacing: 5px;
     }
+
 }
