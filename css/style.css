@@ -233,6 +233,11 @@ hr{
     width: 100%;
 }
 
+.image-slider{
+    display: flex;
+    overflow: hidden;
+}
+
 .cta-black{
     width: 100%;
     margin: 10px 0;
@@ -258,5 +263,8 @@ hr{
         padding: 10px 20px;
         letter-spacing: 5px;
     }
-
+    
+    .grid{
+        display: block;
+    }
 }
